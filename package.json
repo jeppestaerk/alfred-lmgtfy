@@ -1,13 +1,13 @@
 {
   "name": "alfred-lmgtfy",
-  "version": "0.0.0",
-  "description": "Generate &#34;let me google that for you&#34; (http://lmgtfy.com/) link and copy it to clipboard ",
+  "version": "0.1.0",
+  "description": "Generate &#34;let me google that for you&#34; (http://lmgtfy.com/) url and copy it to clipboard ",
   "license": "MIT",
   "repository": "jeppestaerk/alfred-lmgtfy",
   "author": {
     "name": "Jeppe Stærk",
     "email": "dev@staerk.io",
-    "url": "staerk.io"
+    "url": "https://github.com/jeppestaerk/alfred-lmgtfy"
   },
   "engines": {
     "node": ">=4"
@@ -24,7 +24,9 @@
   "keywords": [
     "alfred",
     "workflow",
-    "alfy"
+    "alfy",
+    "alfred-workload",
+    "lmgtfy"
   ],
   "dependencies": {
     "alfy": "^0.6.0"

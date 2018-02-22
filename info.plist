@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>name</key>
-	<string>lmgtfy</string>
 	<key>bundleid</key>
-	<string>io.staerk.lmgtfy</string>
+	<string>io.staerk.alfred.lmgtfy</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -14,7 +12,40 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>AA082245-841D-4290-8914-1F6BD53B47EF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>4042A0B4-2852-4D63-BF6D-B93FB20CD596</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AA082245-841D-4290-8914-1F6BD53B47EF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BF202D51-B1C4-4039-B3B9-02414868E8A1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>10F21202-6B4F-483C-97C8-0AD818258E4D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -24,10 +55,101 @@
 			</dict>
 		</array>
 	</dict>
+	<key>createdby</key>
+	<string>Jeppe Stærk</string>
+	<key>description</key>
+	<string>Generate a lmgtfy.com url</string>
 	<key>disabled</key>
 	<false/>
+	<key>name</key>
+	<string>Let Me Google That For You !</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>lmgtfy url copied to clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>BF202D51-B1C4-4039-B3B9-02414868E8A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>lmgtfy</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Generating url...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>index.js</string>
+				<key>subtext</key>
+				<string>Generate a lmgtfy.com url</string>
+				<key>title</key>
+				<string>Let Me Google That For You !</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5AEDD517-EF91-4E0A-AB57-16F91FDF11E3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>AA082245-841D-4290-8914-1F6BD53B47EF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -50,57 +172,36 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>lmgtfy</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>Searching...</string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>index.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Generate &#34;let me google that for you&#34; (http://lmgtfy.com/) link and copy it to clipboard </string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
+				<key>soundname</key>
+				<string>Hero</string>
+				<key>systemsound</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
-			<string>5AEDD517-EF91-4E0A-AB57-16F91FDF11E3</string>
+			<string>10F21202-6B4F-483C-97C8-0AD818258E4D</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>10F21202-6B4F-483C-97C8-0AD818258E4D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
 		<key>4042A0B4-2852-4D63-BF6D-B93FB20CD596</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>140</integer>
 		</dict>
 		<key>5AEDD517-EF91-4E0A-AB57-16F91FDF11E3</key>
 		<dict>
@@ -109,6 +210,22 @@
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>AA082245-841D-4290-8914-1F6BD53B47EF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>BF202D51-B1C4-4039-B3B9-02414868E8A1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/jeppestaerk/alfred-lmgtfy#readme</string>
 </dict>
 </plist>
