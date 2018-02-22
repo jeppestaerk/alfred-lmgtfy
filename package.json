@@ -1,0 +1,33 @@
+{
+  "name": "alfred-lmgtfy",
+  "version": "0.0.0",
+  "description": "Generate &#34;let me google that for you&#34; (http://lmgtfy.com/) link and copy it to clipboard ",
+  "license": "MIT",
+  "repository": "jeppestaerk/alfred-lmgtfy",
+  "author": {
+    "name": "Jeppe Stærk",
+    "email": "dev@staerk.io",
+    "url": "staerk.io"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0"
+  },
+  "devDependencies": {}
+}
